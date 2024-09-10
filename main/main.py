@@ -6,12 +6,12 @@ domain = "theantechs.com"
 @app.route('/it')
 def page_it():
     # Redirect to a different URL, e.g., http://127.0.0.1:5600
-    return redirect(f"http://corp.{domain}:8080/it", code=302)
+    return redirect(f"http://it.{domain}:8080", code=302)
 
 @app.route('/hr')
 def page_hr():
     # Redirect to a different URL for HR, e.g., another service or page
-    return redirect(f"http://corp.{domain}:8880/hr", code=302)
+    return redirect(f"http://hr.{domain}:8880", code=302)
 
 @app.route('/')
 def index():
