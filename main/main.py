@@ -1,17 +1,17 @@
 from flask import Flask, redirect
 
 app = Flask(__name__)
-domain = "theantechs.com"
+url = "18.136.210.55"
 # Define role-based access control based on path
 @app.route('/it')
 def page_it():
     # Redirect to a different URL, e.g., http://127.0.0.1:5600
-    return redirect(f"http://it.{domain}:8080", code=302)
+    return redirect(f"http://{url}:8080", code=302)
 
 @app.route('/hr')
 def page_hr():
     # Redirect to a different URL for HR, e.g., another service or page
-    return redirect(f"http://hr.{domain}:8880", code=302)
+    return redirect(f"http://{url}:8880", code=302)
 
 @app.route('/')
 def index():
