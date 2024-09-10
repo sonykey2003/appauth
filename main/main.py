@@ -17,8 +17,8 @@ def page_hr():
 def index():
     return """
         <h1>Welcome to your company page!</h1>
-        <p><a href="/it">/IT admin</a> space </p>
-        <p><a href="/hr">/HR</a> space</p>
+        <p><a href="/it">IT admin</a> space </p>
+        <p><a href="/hr">HR admin</a> space</p>
     """
 
 if __name__ == '__main__':
