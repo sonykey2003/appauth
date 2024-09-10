@@ -1,11 +1,12 @@
+import os
 from flask import Flask, redirect
 
 app = Flask(__name__)
-url = "18.136.210.55"
+url = os.getenv('URL','localhost')
 # Define role-based access control based on path
 @app.route('/it')
 def page_it():
-    # Redirect to a different URL, e.g., http://127.0.0.1:5600
+    # Redirect to a different URL, e.g., http://it.yourdomain.com:8080
     return redirect(f"http://{url}:8080", code=302)
 
 @app.route('/hr')
