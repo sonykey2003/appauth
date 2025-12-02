@@ -7,12 +7,12 @@ url = os.getenv('URL','localhost')
 @app.route('/it')
 def page_it():
     # Redirect to a different URL, e.g., http://it.yourdomain.com:8080
-    return redirect(f"http://{url}:8080", code=302)
+    return redirect(f"http://{url}:5600", code=302)
 
 @app.route('/hr')
 def page_hr():
     # Redirect to a different URL for HR, e.g., another service or page
-    return redirect(f"http://{url}:8880", code=302)
+    return redirect(f"http://{url}:5700", code=302)
 
 @app.route('/')
 def index():

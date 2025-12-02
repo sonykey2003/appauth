@@ -11,6 +11,7 @@ def home():
     if role == 'IT':
         return """
             <h1>Welcome to the IT page!</h1>
+            <p>Welcome to BISP Python Workshop</p>
             <p>Hello World!</p>
             <p>你好!</p>
             <p>こんにちは!</p>
