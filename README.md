@@ -50,7 +50,7 @@ The sub app serves pages based on roles (`IT` or `HR`) and runs on port `5600`.
 4. Run the Docker container for the HR app:
 
     ```bash
-   docker run -d -p 5700:5600 -e ROLE='HR' --name hr-app -e PORT=5700 page-app
+   docker run -d -p 5700:5700 -e ROLE='HR' --name hr-app -e PORT=5700 page-app
    ```
 
    This command:
