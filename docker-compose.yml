@@ -1,0 +1,41 @@
+#version: '3.9'
+
+services:
+  flask-main:
+    build: ./main
+    container_name: flask-main
+    ports:
+      - "80:5500"
+    environment:
+      - URL=localhost
+
+  it-app:
+    build: ./appPages
+    container_name: it-app
+    ports:
+      - "5600:5600"
+    environment:
+      - ROLE=IT
+      - PORT=5600
+
+  hr-app:
+    build: ./appPages
+    container_name: hr-app
+    ports:
+      - "5700:5600"
+    environment:
+      - ROLE=HR
+      - PORT=5600
+
+  gamers-app:
+    build: ./appPages
+    container_name: gamers-app
+    ports:
+      - "5800:5600"
+    environment:
+      - ROLE=Gamers
+      - PORT=5600
+
+networks:
+  default:
+    driver: bridge
