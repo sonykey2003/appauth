@@ -18,17 +18,15 @@ The main app runs on port `5500` and has routes for role-based access (`/it` and
   docker-compose up --build -d
 ```
 
-3. Once you're done or there is an update to the code:
+3. Once you're done:
 
 ```bash
    docker-compose down
    docker-compose up --build -d
 ```
-
-4. Re-run the app:
-
+4. When there is a change in code, adopt it to the image, and re-run the app:
 ```bash
-   docker-compose up -d
+docker-compose up --force-recreate --build -d
 ```
 
    This command does the following:
